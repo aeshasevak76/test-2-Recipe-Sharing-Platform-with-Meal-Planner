@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RecipeShare - Discover, Cook, Share</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Custom styles to enhance Tailwind */
+        .recipe-card {
+            transition: transform 0.3s ease;
+        }
+        .recipe-card:hover {
+            transform: scale(1.05);
+        }
+        .hero-bg {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                        url('https://www.archanaskitchen.com/images/archanaskitchen/0-Archanas-Kitchen-Recipes/2019/Vegetable_Makhanwala_Recipe_North_Indian_Punjabi_1_1600.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 font-sans">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md fixed w-full z-10 top-0">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="text-2xl font-bold text-green-600">RecipeShare</div>
+            <div class="space-x-4">
+                <a href="#home" class="text-gray-700 hover:text-green-600">Home</a>
+                <a href="categories.html" class="text-gray-700 hover:text-green-600">Recipes</a>
+                <a href="meal.html" class="text-gray-700 hover:text-green-600">Meal Planner</a>
+                <input type="text" placeholder="Search recipes..." 
+                    class="border rounded px-2 py-1 text-sm focus:outline-none focus:ring-2 focus:ring-green-400" />
+                <a href="login.html" class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600">Login</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="home" class="hero-bg text-white text-center pt-24 pb-16">
+        <div class="container mx-auto px-4">
+            <h1 class="text-4xl font-bold mb-6">Discover Delicious Organic Recipes</h1>
+            <p class="text-xl mb-8">Fresh, Healthy, and Easy to Cook</p>
+            <div class="flex justify-center space-x-4">
+                <a href="#recipes" class="bg-white text-green-600 px-6 py-3 rounded-full hover:bg-green-100">
+                    Browse Recipes
+                </a>
+                <a href="#meal-planner" class="bg-transparent border-2 border-white text-white px-6 py-3 rounded-full hover:bg-white hover:text-green-600">
+                    Plan Meals
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Popular Recipes Section -->
+    <section id="recipes" class="container mx-auto px-4 py-16">
+        <h2 class="text-3xl font-bold text-center mb-10">Popular Recipes</h2>
+        <div class="grid md:grid-cols-3 gap-6">
+            <div class="recipe-card bg-white rounded-lg shadow-md overflow-hidden cursor-pointer">
+                <img src="thai.jpg" 
+                     alt="Vegetable Makhanwala" 
+                     class="w-full h-48 object-cover"/>
+                <div class="p-4">
+                    <h3 class="font-bold text-xl mb-2">Thai Fried Rice</h3>
+                    <p class="text-gray-600"> Authentic Thai  Delight</p>
+                    <div class="mt-4 flex justify-between items-center">
+                        <span class="text-green-600">39 mins</span>
+                        <button class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600">
+                            <a href="thaifood.html">View Recipe</a>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="recipe-card bg-white rounded-lg shadow-md overflow-hidden cursor-pointer">
+                <img src="avo3.jpg" 
+                     alt="Quinoa Salad" 
+                     class="w-full h-48 object-cover"/>
+                <div class="p-4">
+                    <h3 class="font-bold text-xl mb-2">Avocado Toast</h3>
+                    <p class="text-gray-600">Healthy & Nutritious Meal</p>
+                    <div class="mt-4 flex justify-between items-center">
+                        <span class="text-green-600">15 mins</span>
+                        <button class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600">
+                            <a href = "avocado.html">View Recipe</a>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="recipe-card bg-white rounded-lg shadow-md overflow-hidden cursor-pointer">
+                <img src="pie1.jpg" 
+                     alt="Smoothie Bowl" 
+                     class="w-full h-48 object-cover"/>
+                <div class="p-4">
+                    <h3 class="font-bold text-xl mb-2">S'mores Pie</h3>
+                    <p class="text-gray-600">Baked English Dessert</p>
+                    <div class="mt-4 flex justify-between items-center">
+                        <span class="text-green-600">48 mins</span>
+                        <button class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600">
+                            <a href ="pie.html">View Recipe</a>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-green-600 text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2024 RecipeShare | All Rights Reserved</p>
+            <div class="mt-4 space-x-4">
+                <a href="#" class="hover:underline">Privacy Policy</a>
+                <a href="#" class="hover:underline">Terms of Service</a>
+                <a href="#" class="hover:underline">Contact Us</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
